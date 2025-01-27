@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha em HTML</title>
+    <!-- Link para o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- Formulário para o jogo da velha -->
+    <form>
+        <h1>Jogo da Velha</h1>
+        <div id="conteiner">
+            <div class="linha" id="linha1">
+                <!-- Cada div representa uma casa do tabuleiro e chama a função jogar() ao ser clicada -->
+                <div class="casinha" onclick="jogar(1)" id="casa1">1</div>
+                <div class="casinha" onclick="jogar(2)" id="casa2">2</div>
+                <div class="casinha" onclick="jogar(3)" id="casa3">3</div>
+            </div>
+            <div class="linha" id="linha2">
+                <div class="casinha" onclick="jogar(4)" id="casa4">4</div>
+                <div class="casinha" onclick="jogar(5)" id="casa5">5</div>
+                <div class="casinha" onclick="jogar(6)" id="casa6">6</div>
+            </div>
+            <div class="linha" id="linha3">
+                <div class="casinha" onclick="jogar(7)" id="casa7">7</div>
+                <div class="casinha" onclick="jogar(8)" id="casa8">8</div>
+                <div class="casinha" onclick="jogar(9)" id="casa9">9</div>
+            </div>
+        </div>
+        <br>
+        <!-- Seção para selecionar o jogador -->
+        <div id="jogador">
+            <label for="x">X</label>
+            <input type="radio" name="radio1" id="x" value="X" checked="true" onclick="alternarjogador(1)" title="Selecionar jogador X"/> <br />
+            <label for="o">O</label>
+            <input type="radio" name="radio2" id="o" value="O" onclick="alternarjogador(2)" title="Selecionar jogador O"/> <br />
+        </div>
+        <br>
+        <!-- Campo para inserir o nome do Jogador 1 -->
+        <label for="nomeJogador1">Nome do Jogador 1 (X):</label>
+        <input type="text" id="nomeJogador1">
+        <br>
+        <!-- Campo para inserir o nome do Jogador 2 -->
+        <label for="nomeJogador2">Nome do Jogador 2 (O):</label>
+        <input type="text" id="nomeJogador2">
+        <br>
+        <!-- Botão para iniciar a partida -->
+        <input type="button" onclick="iniciarpartida()" value="Iniciar Partida" id="botao" title="Iniciar uma nova partida"/>
+        <!-- Div para exibir um alerta -->
+        <div id="alerta"></div>
+        <br>
+    </form>
+    <!-- Link para o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
