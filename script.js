@@ -115,8 +115,8 @@ function checarEmpate() {
 // Função para iniciar uma nova partida
 function iniciarpartida() {
     // Obtém os nomes dos jogadores dos campos de entrada
-    nomeJogador1 = document.getElementById('nomeJogador1').value || "Jogador(a) X";
-    nomeJogador2 = document.getElementById('nomeJogador2').value || "Jogador(a) O";
+    nomeJogador1 = document.getElementById('nomeJogador1').value + " (X)" || "Jogador(a) X";
+    nomeJogador2 = document.getElementById('nomeJogador2').value + " (O)" || "Jogador(a) O";
 
     // Define o jogador inicial com base na seleção
     jogadorAtual = document.getElementById('x').checked ? "X" : "O";
